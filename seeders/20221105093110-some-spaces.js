@@ -10,16 +10,30 @@ module.exports = {
         color: "#000000",
         createdAt: new Date(),
         updatedAt: new Date(),
+        userId: 1,
+      },
+      {
+        title: "Bananas Space",
+        description: "The banana space is about bananas",
+        backgroundColor: "#ffffff",
+        color: "#000000",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        userId: 2,
+      },
+      {
+        title: "Cocos Space",
+        description: "The Coco space is about coconuts",
+        backgroundColor: "#ffffff",
+        color: "#000000",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        userId: 3,
       },
     ]);
   },
 
   async down(queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    await queryInterface.bulkDelete("spaces", null, {});
   },
 };
