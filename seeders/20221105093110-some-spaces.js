@@ -1,5 +1,5 @@
 "use strict";
-
+//seeders for spaces have at least 2
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("spaces", [

@@ -1,4 +1,5 @@
 "use strict";
+//this is the column added on spaces for userId and stories for spaceId
 
 module.exports = {
   async up(queryInterface, Sequelize) {

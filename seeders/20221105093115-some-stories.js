@@ -1,5 +1,5 @@
 "use strict";
-
+//seeders for stories have at least 4
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert("stories", [

@@ -1,4 +1,5 @@
 "use strict";
+//Backend Set Up: This is for the stories
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable("stories", {

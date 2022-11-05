@@ -1,6 +1,6 @@
 "use strict";
-const bcrypt = require("bcrypt")
-
+const bcrypt = require("bcrypt");
+//seeders for user has 3 people
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
@@ -13,7 +13,7 @@ module.exports = {
           password: bcrypt.hashSync("apple", 10),
           createdAt: new Date(),
           updatedAt: new Date(),
-        }, 
+        },
         {
           name: "Banana",
           email: "banana@banana.com",
@@ -21,7 +21,7 @@ module.exports = {
           password: bcrypt.hashSync("banana", 10),
           createdAt: new Date(),
           updatedAt: new Date(),
-        },  
+        },
         {
           name: "Coco",
           email: "coco@coco.com",
@@ -29,7 +29,7 @@ module.exports = {
           password: bcrypt.hashSync("coco", 10),
           createdAt: new Date(),
           updatedAt: new Date(),
-        },     
+        },
       ],
       {}
     );

@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       story.belongsTo(models.space, { foreignKey: "spaceId" });
+      //relations between models
     }
   }
   story.init(

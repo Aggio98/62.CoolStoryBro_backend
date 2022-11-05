@@ -1,4 +1,5 @@
 "use strict";
+//Backend Set Up Migrations for the spaces
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable("spaces", {
