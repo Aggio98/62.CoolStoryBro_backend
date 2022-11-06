@@ -44,7 +44,7 @@ module.exports = {
         content:
           "Man sells coconuts on the beach and makes a living, check it out",
         imageUrl: "https://doanie.files.wordpress.com/2009/11/coconut.jpg",
-        createdAt: new Date(),
+        createdAt: new Date("2022-11-6 13:05:49.587+00"),
         updatedAt: new Date(),
         spaceId: 3,
       },
@@ -54,7 +54,7 @@ module.exports = {
           "If you are traveling to a place that has a lot of coconuts be careful they might fall on you",
         imageUrl:
           "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2019/11/GettyImages-200368872-001-e1573140181689-920x783.jpg",
-        createdAt: new Date(),
+        createdAt: new Date("2022-11-6 13:06:47.587+00"),
         updatedAt: new Date(),
         spaceId: 3,
       },

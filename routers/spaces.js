@@ -13,7 +13,11 @@ router.get("/spaces", async (req, res, next) => {
 router.get("/spaces/:id", async (req, res, next) => {
   try {
     const spaceId = parseInt(req.params.id);
-    const getSpace = await Space.findByPk(spaceId, { include: [Story] });
+    const getSpace = await Space.findByPk(
+      spaceId,
+      { include: [Story] },
+      { order: [[{ model: Story }, "createdAt", "DESC"]] }
+    );
     if (getSpace) {
       res.send(getSpace);
     } else {

@@ -4,11 +4,11 @@ const { toJWT } = require("../auth/jwt");
 const authMiddleware = require("../auth/middleware");
 const User = require("../models/").user;
 const { SALT_ROUNDS } = require("../config/constants");
+const Space = require("../models").space;
 
 const router = new Router();
 
-
-//login 
+//login
 router.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -36,7 +36,6 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-
 //signup
 router.post("/signup", async (req, res) => {
   const { email, password, name } = req.body;
@@ -49,6 +48,14 @@ router.post("/signup", async (req, res) => {
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
       name,
+    });
+
+    const newSpace = await Space.create({
+      title: `${name}'s space`,
+      description: null,
+      backgroundColor: "#ffffff",
+      color: "#000000",
+      userId: newUser.id,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
