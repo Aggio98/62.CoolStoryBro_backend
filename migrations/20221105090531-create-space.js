@@ -18,9 +18,11 @@ module.exports = {
       },
       backgroundColor: {
         type: Sequelize.STRING,
+        defaultValue: "#ffffff",
       },
       color: {
         type: Sequelize.STRING,
+        defaultValue: "#000000",
       },
       createdAt: {
         allowNull: false,
